@@ -5,7 +5,6 @@
         this.products = wands;
     });
 
-
     app.controller('ReviewController', function(){
     	this.review = {};
 
@@ -16,32 +15,31 @@
     	};
     });
 
-    app.directive("productTabs", function() {
+    app.directive("productTitle", function(){
         return {
-          restrict: "E",
-          templateUrl: "product-tabs.html",
-          controller: function() {
-            this.tab = 1;
-
-            this.isSet = function(checkTab) {
-              return this.tab === checkTab;
-            };
-
-            this.setTab = function(activeTab) {
-              this.tab = activeTab;
-            };
-          },
-          controllerAs: "tab"
-        };
-      });
-
-    app.directive("productReviews", function() {
-        return {
-            restrict: "E",
-            templateUrl: "product-reviews.html"
+            restrict: 'E',
+            templateUrl: 'product-title.html'
         };
     });
 
+    app.directive("productTabs", function() {
+        return {
+            restrict: "E",
+            templateUrl: "product-tabs.html",
+            controller: function() {
+                this.tab = 1;
+
+                this.isSet = function(checkTab) {
+                    return this.tab === checkTab;
+                };
+
+                this.setTab = function(activeTab) {
+                    this.tab = activeTab;
+                };
+            },
+            controllerAs: "tab"
+        };
+    });
 
     app.directive('woodDescription', function(){
         return {
@@ -64,10 +62,18 @@
         };
     });
 
+    app.directive("productReviews", function() {
+        return {
+            restrict: "E",
+            templateUrl: "product-reviews.html"
+        };
+    });
+
+
   var wands = [
     { 
     	wood: 'Elder', 
-    	woodInfo: 'The rarest wand wood of all, and reputed to be deeply unlucky, elder wands are trickier to master than any other. They contain powerful magic, but scorn to remain with any owner who is not the superior of his or her company; it takes a remarkable wizard to keep an elder wand for any length of time. The old superstition, \'wand of elder, never prosper,\' has its basis in this fear of the wand, but in fact, the superstition is baseless, and those foolish wandmakers who refuse to work with elder do so more because they doubt they will be able to sell their products than from fear of working with this wood. The truth is that only a highly unusual person will find their perfect match in elder, and on the rare occasion when such a pairing occurs, it may be taken as certain that the witch or wizard in question is marked out for a special destiny. Interestingly, Garrick Ollivander found - during his long years of study - that the owners of elder wands almost always feel a powerful affinity with those chosen by rowan.',
+    	woodInfo: 'The rarest wand wood of all, and reputed to be deeply unlucky, elder wands are trickier to master than any other. \n\nThey contain powerful magic, but scorn to remain with any owner who is not the superior of his or her company; it takes a remarkable wizard to keep an elder wand for any length of time. The old superstition, \'wand of elder, never prosper,\' has its basis in this fear of the wand, but in fact, the superstition is baseless, and those foolish wandmakers who refuse to work with elder do so more because they doubt they will be able to sell their products than from fear of working with this wood. The truth is that only a highly unusual person will find their perfect match in elder, and on the rare occasion when such a pairing occurs, it may be taken as certain that the witch or wizard in question is marked out for a special destiny. Interestingly, Garrick Ollivander found - during his long years of study - that the owners of elder wands almost always feel a powerful affinity with those chosen by rowan.',
     	length: 13.5, 
     	core: 'Dragon Heartstring', 
     	coreInfo: 'Dragon heartstring is a material from a dragon that can be used in the core of a wand. It is unknown from which varieties of dragon the heartstrings are collected, and what effect this difference makes on the abilities of the wand, if any. Due to the heart being a vital organ in any creature, it can be assumed that the material is taken after the dragon has either died of natural causes or been killed. It is also unknown what quantity of string can be collected from each beast\'s heart. As a rule, dragon heartstrings produce wands with the most power, capable of the most flamboyant spells. Dragon wands tend to learn quicker than other types. While they can change allegiance if won from their original master, they always bond strongly with the current owner. The dragon wand tends to be easiest to turn to the Dark Arts, though it will not incline that way of its own accord. It is also the most prone of the three cores to accidents, being somewhat temperamental. It also tends to be lethally hazardous if combined with certain woods.',

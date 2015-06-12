@@ -19,14 +19,7 @@
       </div>
 
       <div style="border-bottom: 1px solid #eee; margin-bottom: 15px;"ng-repeat="product in store.products | orderBy: 'price'" class="product row">
-        <img class="image img-thumbnail" ng-src="{{product.images[0].thumb}}"/>
-        <h3>
-        {{product.wood}} Wand | {{product.core}}
-        </h3>
-        <div class="price-container">
-          <p class="price">{{product.price | currency}}</p>
-          <button>Add to Cart</button>
-        </div>
+        <product-title></product-title>
         <div class="clear-fix"></div>
         <product-tabs></product-tabs>
       </div>
