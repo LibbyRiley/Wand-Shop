@@ -1,16 +1,16 @@
 .main {
 	max-width: 700px;
-	padding-left: 5% !important;
-	padding-right: 5% !important;
+	padding-left: 5%;
+	padding-right: 5%;
 	background-color: white;
 }
 
 body {
-	background-color: rgb(197, 185, 178) !important;
+	background-color: rgb(197, 185, 178);
 }
 
 blockquote {
-	border-color: sienna !important;
+	border-color: sienna;
 
 }
 
@@ -31,7 +31,7 @@ p {
  }
 
  h2 {
- 	font-size: 16px !important;
+ 	font-size: 16px;
  }
 
  .image {
@@ -54,7 +54,7 @@ p {
  }
 
 .reviews li blockquote {
-	font-size: 14px !important;
+	font-size: 14px;
 }
 
 .ng-invalid.ng-dirty {
@@ -65,5 +65,7 @@ p {
 	border-color: green;
 }  
 
-
+.nav-pills {
+	margin-bottom: 20px;
+}
 
