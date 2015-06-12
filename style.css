@@ -1,0 +1,69 @@
+.main {
+	max-width: 700px;
+	padding-left: 5% !important;
+	padding-right: 5% !important;
+	background-color: white;
+}
+
+body {
+	background-color: rgb(197, 185, 178) !important;
+}
+
+blockquote {
+	border-color: sienna !important;
+
+}
+
+p {
+	font-size: 14px;
+}
+
+.price-container {
+	 margin-bottom: 20px;
+}
+
+.price {
+	font-size: 20px;
+	font-style: italic;
+}
+ .page-header {
+ 	text-align: center;
+ }
+
+ h2 {
+ 	font-size: 16px !important;
+ }
+
+ .image {
+ 	width: 30%;
+ 	float: left;
+ 	margin-right: 20px;
+ }
+ .tab {
+ 	display: inline-block;
+ 	margin-top: 20px;
+ }
+
+ .logo {
+ 	width: 15%;
+ }
+
+ .reviews {
+ 	padding-left: 0;
+ 	list-style: none;
+ }
+
+.reviews li blockquote {
+	font-size: 14px !important;
+}
+
+.ng-invalid.ng-dirty {
+	border-color: red;
+}  
+
+.ng-valid.ng-dirty {
+	border-color: green;
+}  
+
+
+
