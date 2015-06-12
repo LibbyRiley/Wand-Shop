@@ -6,6 +6,16 @@
     });
 
 
+    app.controller('ReviewController', function(){
+    	this.review = {};
+
+    	this.addReview = function(product){
+            this.review.createdOn = Date.now();
+    		product.reviews.push(this.review);
+    		this.review = {};
+    	};
+    });
+
     app.directive("productTabs", function() {
         return {
           restrict: "E",
@@ -28,17 +38,7 @@
     app.directive("productReviews", function() {
         return {
             restrict: "E",
-            templateUrl: "product-reviews.html",
-            controller: function() {
-                this.review = {};
-
-                this.addReview = function(product){
-                    this.review.createdOn = Date.now();
-                    product.reviews.push(this.review);
-                    this.review = {};
-                };
-            },
-            controllerAs: "review"
+            templateUrl: "product-reviews.html"
         };
     });
 

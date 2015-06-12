@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="wandStore">
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="custom.css" >
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+
+  <body>
+
+    <div class=" main container" ng-controller="StoreController as store">
+
+      <div class="page-header">
+        <img class="logo"src="ollivanders_1.jpg"/>
+        <h1>Ollivander's</h1>
+        <h2><em>~ Makers of Fine Wands since 382 B.C. ~</em></h2>
+      </div>
+
+      <div style="border-bottom: 1px solid #eee; margin-bottom: 15px;"ng-repeat="product in store.products | orderBy: 'price'" class="product row">
+        <img class="image img-thumbnail" ng-src="{{product.images[0].thumb}}"/>
+        <h3>
+        {{product.wood}} Wand | {{product.core}}
+        </h3>
+        <div class="price-container">
+          <p class="price">{{product.price | currency}}</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="clear-fix"></div>
+        <product-tabs></product-tabs>
+      </div>
+    </div>
+
+  </body>
+
+</html>
