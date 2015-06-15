@@ -6,27 +6,28 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="custom.css" >
     <script type="text/javascript" src="angular.min.js"></script>
-    <script type="text/javascript" src="angular-route.js"></script>
+    <!-- <script type="text/javascript" src="angular-route.js"></script> -->
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="products.js"></script>
   </head>
 
   <body>
 
-    <div class=" main container" ng-controller="StoreController as store">
-
-      <div class="page-header">
-        <img class="logo"src="ollivanders_1.jpg"/>
+    <section class=" main container" ng-controller="StoreController as store">
+  
+      <header class="page-header">
+        <img class="logo" src="ollivanders_1.jpg" alt="Olivander's Wand Shop Logo"/>
         <h1>Ollivander's</h1>
         <h2><em>~ Makers of Fine Wands since 382 B.C. ~</em></h2>
-      </div>
+      </header>
 
-      <div style="border-bottom: 1px solid #eee; margin-bottom: 15px;"ng-repeat="product in store.products | orderBy: 'price'" class="product row">
+      <section class="all-products" ng-repeat="product in store.products | orderBy: 'price'" class="product row">
+        <!-- Product title, image, price, add to cart button -->
         <product-title></product-title>
-        <div class="clear-fix"></div>
+        <!-- Product info: wood, core, langth, flexibility, and reviews -->
         <product-tabs></product-tabs>
-      </div>
-    </div>
+      </section>
+    </section>
 
   </body>
 

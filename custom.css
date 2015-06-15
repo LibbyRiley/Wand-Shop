@@ -5,10 +5,6 @@
 	background-color: white;
 }
 
-body {
-	background-color: rgb(197, 185, 178);
-}
-
 blockquote {
 	border-color: sienna;
 
@@ -16,6 +12,11 @@ blockquote {
 
 p {
 	font-size: 14px;
+}
+
+.all-products{
+	border-bottom: 1px solid #eee; 
+	margin-bottom: 15px;
 }
 
 .price-container {

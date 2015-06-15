@@ -1,4 +1,5 @@
 (function() {
+
     var app = angular.module('wandStore', []);
 
     app.controller('StoreController', function(){
@@ -15,6 +16,7 @@
     	};
     });
 
+    /* Product title, image, price, add to cart button */
     app.directive("productTitle", function(){
         return {
             restrict: 'E',
@@ -22,6 +24,7 @@
         };
     });
 
+    /* Product info: wood, core, langth, flexibility, and reviews */
     app.directive("productTabs", function() {
         return {
             restrict: "E",
@@ -69,8 +72,8 @@
         };
     });
 
-
-  var wands = [
+    /* Array containing product descriptions */
+    var wands = [
     { 
     	wood: 'Elder', 
     	woodInfo: 'The rarest wand wood of all, and reputed to be deeply unlucky, elder wands are trickier to master than any other. \n\nThey contain powerful magic, but scorn to remain with any owner who is not the superior of his or her company; it takes a remarkable wizard to keep an elder wand for any length of time. The old superstition, \'wand of elder, never prosper,\' has its basis in this fear of the wand, but in fact, the superstition is baseless, and those foolish wandmakers who refuse to work with elder do so more because they doubt they will be able to sell their products than from fear of working with this wood. The truth is that only a highly unusual person will find their perfect match in elder, and on the rare occasion when such a pairing occurs, it may be taken as certain that the witch or wizard in question is marked out for a special destiny. Interestingly, Garrick Ollivander found - during his long years of study - that the owners of elder wands almost always feel a powerful affinity with those chosen by rowan.',
